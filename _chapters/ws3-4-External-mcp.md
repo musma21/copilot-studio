@@ -20,7 +20,7 @@ Copilot Studio에서는 앞선 실습과 같이 카탈로그 형식으로 제공
 
 이번 실습에서는 사설 MCP 서버인 **외부 뉴스 MCP** 를 에이전트에 연결하여 키워드, 지역 기반으로 해외에서 제공되는 뉴스 정보를 조회하는 도구로 활용해보겠습니다.
 
-> 이 MCP는 [NewsAPI.org](https://newsapi.org/) 에서 제공하는 API를 활용하여 구축된 MCP 서버 입니다. <br> 해당 MCP 서버는 Microsoft Korea에서 개발한 MCP 서버로, Azure Container Apps에 배포되어 있기에 리소스 상황에 따라 서비스가 제공되지 않을 수 있습니다. <br> 만약 연결이 원활하지 않을 경우, [News API MCP 서버 직접 배포 가이드](https://github.com/chichoi1991/Demo-MCP-Server/blob/main/News-api-mcp/README.md)를 참고하여 직접 배포 후 연결해보시길 권장드립니다. <br>
+> 이 MCP는 [NewsAPI.org](https://newsapi.org/) 에서 제공하는 API를 활용하여 구축된 MCP 서버 입니다. <br> 해당 MCP 서버는 Microsoft Korea에서 개발한 MCP 서버로, Azure Container Apps에 배포되어 있기에 리소스 상황에 따라 서비스가 제공되지 않을 수 있습니다. <br> 만약 연결이 원활하지 않을 경우, [News API MCP 서버 직접 배포 가이드](https://github.com/musma21/Demo-MCP-Server/blob/main/News-api-mcp/README.md)를 참고하여 직접 배포 후 연결해보시길 권장드립니다. <br>
 
 ![1]({{ site.baseurl }}/assets/image/ws3/스크린샷%202026-03-19%20002502.png)
 
@@ -50,7 +50,7 @@ Copilot Studio에서는 앞선 실습과 같이 카탈로그 형식으로 제공
 | `get-top-headlines` | 국가/카테고리별 톱 헤드라인 |
 | `get-news-sources` | 뉴스 소스 목록 조회 |
 
-📄 상세: [News-api-mcp/README.md](https://github.com/chichoi1991/Demo-MCP-Server/tree/master/News-api-mcp)
+📄 상세: [News-api-mcp/README.md](https://github.com/musma21/Demo-MCP-Server/tree/master/News-api-mcp)
 
 <br>
 
@@ -76,7 +76,7 @@ Copilot Studio에서는 앞선 실습과 같이 카탈로그 형식으로 제공
 
 아래 실습을 위한  **ThinQ MCP 서버 URL** 을 입력합니다.
 
-> <b>중요!</b> 이 MCP는 [NewsAPI.org](https://newsapi.org/) 에서 제공하는 API를 활용하여 구축된 MCP 서버 입니다. <br> 해당 MCP 서버는 Microsoft Korea에서 개발한 MCP 서버로, Azure Container Apps에 배포되어 있기에 리소스 상황에 따라 서비스가 제공되지 않을 수 있습니다. <br> 만약 연결이 원활하지 않을 경우, [News API MCP 서버 직접 배포 가이드](https://github.com/chichoi1991/Demo-MCP-Server/blob/main/News-api-mcp/README.md)를 참고하여 직접 배포 후 연결해보시길 권장드립니다. <br>
+> <b>중요!</b> 이 MCP는 [NewsAPI.org](https://newsapi.org/) 에서 제공하는 API를 활용하여 구축된 MCP 서버 입니다. <br> 해당 MCP 서버는 Microsoft Korea에서 개발한 MCP 서버로, Azure Container Apps에 배포되어 있기에 리소스 상황에 따라 서비스가 제공되지 않을 수 있습니다. <br> 만약 연결이 원활하지 않을 경우, [News API MCP 서버 직접 배포 가이드](https://github.com/musma21/Demo-MCP-Server/blob/main/News-api-mcp/README.md)를 참고하여 직접 배포 후 연결해보시길 권장드립니다. <br>
 
 
 | 항목 | 값 | 설명 |
