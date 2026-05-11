@@ -1,7 +1,7 @@
 title: "Microsoft Copilot Agentic Blog"
 description: "Microsoft Copilot 에이전트 생태계 — 실무 가이드, 핸즈온 워크샵, 기술 업데이트를 한곳에서"
-baseurl: "/Agent_Blog"
-url: ""
+baseurl: "/copilot-studio"   # ← 여기만 변경
+url: "https://musma21.github.io"  # ← 여기도 추가
 markdown: kramdown
 kramdown:
   input: GFM
@@ -24,7 +24,6 @@ defaults:
     values:
       layout: "default"
 
-# Sidebar navigation sections
 nav_sections:
   - key: guide
     title: "Copilot Studio 실무 가이드"
