@@ -37,3 +37,6 @@ nav_sections:
   - key: updates
     title: "기술 업데이트"
     icon: "🔔"
+  - key: gallery
+    title: "프롬프트 갤러리"
+    icon: "🖼️"
