@@ -194,3 +194,5 @@ LG전자는 일상업무환경에서 AI Agent를 도입하여 획기적인 업�
 - 회의 시간 동안 Teams 회의의 채팅창에서 공유된 참조문서 혹은 링크 요약
 - 다음 회의 일정
 ```
+<img width="794" height="693" alt="image" src="https://github.com/user-attachments/assets/29c21cb9-dbc9-4f48-ba77-225b183dd9c2" />
+
