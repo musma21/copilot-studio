@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Jekyll build output (tracked separately via _site/)
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+# Gemfile.lock은 각 플랫폼(macOS/Linux)이 직접 생성하도록 추적하지 않음
+Gemfile.lock
+vendor/
