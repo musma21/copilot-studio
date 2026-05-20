@@ -11,7 +11,7 @@ category: gallery
 
 # 트랜스크립트 기반 회의록 작성
 
-* Agent : M365 Copilot Chat
+* Agent : Cowork
 * Prompts
 
 ```

@@ -102,6 +102,15 @@ git push
 
 GitHub Pages will automatically rebuild and deploy the site from the updated `_chapters/` files.
 
+**Step 7 — Verify GitHub Actions succeeded**
+
+Go to the Actions tab and confirm the latest build passed:
+```
+https://github.com/musma21/copilot-studio/actions
+```
+
+Look for a green checkmark on the **"Deploy Jekyll site to Pages"** workflow run triggered by your push. If it fails, check the **build** job logs for errors before making further edits.
+
 ---
 
 ### Important: Liquid Template Conflicts
@@ -166,6 +175,36 @@ Syntax highlighter. Automatically adds color to fenced code blocks (` ```python 
 
 ---
 
+## Local vs. GitHub Actions Environment Isolation
+
+### Background
+
+Jekyll's `Gemfile.lock` records the exact gem versions **and the OS platform** resolved during `bundle install`. When this file is committed from macOS (`arm64-darwin`), GitHub Actions (running on `ubuntu-latest` / `x86_64-linux`) cannot use it — bundler exits with an error and the deployment fails.
+
+### Applied Fix
+
+The following two measures have been applied to permanently prevent this conflict:
+
+| Measure | File | Effect |
+|---------|------|--------|
+| `Gemfile.lock` added to `.gitignore` | `.gitignore` | Lock file is never committed; each environment generates its own |
+| `Gemfile.lock` removed from git tracking | `git rm --cached` | Existing entry deleted from repository history |
+
+### How Each Environment Now Works
+
+| | **Local (macOS / arm64-darwin)** | **GitHub Actions (ubuntu-latest / x86_64-linux)** |
+|---|---|---|
+| **Lock file** | Generated locally on `bundle install`, not committed | Generated fresh on each Actions run |
+| **Platform** | `arm64-darwin` | `x86_64-linux` |
+| **Interference** | None — file stays local only | None — file is generated in the runner |
+
+### Rule
+
+> **Never commit `Gemfile.lock`.**  
+> It is listed in `.gitignore` for this reason. If you accidentally generate it and `git status` shows it, it will be ignored automatically.
+
+---
+
 ## Project File Structure
 
 ```
@@ -176,7 +215,7 @@ copilot-studio/
 ├── assets/             # CSS, images, sample data
 ├── _config.yml         # Jekyll site configuration
 ├── Gemfile             # Ruby gem dependencies
-├── Gemfile.lock        # Locked gem versions
+├── .gitignore          # Excludes Gemfile.lock and macOS artifacts from git
 └── index.html          # Home page (Liquid template)
 ```
 
